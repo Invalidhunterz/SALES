@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Excel Multi-field Input Form</title>
+</head>
+<body>
+    <h2>Input Details for Excel Sheet</h2>
+    <form action="/save" method="post">
+        <label>FIRM: </label>
+        <input type="text" name="firm" required><br><br>
+        <label>DATA: </label>
+        <input type="text" name="data" required><br><br>
+        <label>PERIOD: </label>
+        <input type="text" name="period" required><br><br>
+        <label>GST NO: </label>
+        <input type="text" name="gstno" required><br><br>
+        <input type="submit" value="Save">
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
